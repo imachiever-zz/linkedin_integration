@@ -1,0 +1,1075 @@
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon May 26 12:06:32 +0530 2014
+Served asset /rails.png - 200 OK (3ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon May 26 13:03:43 +0530 2014
+
+NoMethodError (undefined method `devise_for' for #<ActionDispatch::Routing::Mapper:0x107ada7c0>):
+  config/routes.rb:2
+  config/routes.rb:1
+
+Rendered /Users/rajatbhatia/.rvm/gems/ree-1.8.7-2011.03/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.2ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ree-1.8.7-2011.03/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.9ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ree-1.8.7-2011.03/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (8.9ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon May 26 13:03:45 +0530 2014
+Served asset /rails.png - 200 OK (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon May 26 13:03:47 +0530 2014
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at Mon May 26 13:17:56 +0530 2014
+Served asset /rails.png - 304 Not Modified (1ms)
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.9ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (0.7ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to DeviseCreateUsers (20140526065128)
+  [1m[35m (0.4ms)[0m  CREATE TABLE "users" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "email" varchar(255) DEFAULT '' NOT NULL, "encrypted_password" varchar(255) DEFAULT '' NOT NULL, "reset_password_token" varchar(255), "reset_password_sent_at" datetime, "remember_created_at" datetime, "sign_in_count" integer DEFAULT 0, "current_sign_in_at" datetime, "last_sign_in_at" datetime, "current_sign_in_ip" varchar(255), "last_sign_in_ip" varchar(255), "created_at" datetime, "updated_at" datetime) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.6ms)[0m  CREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_email')
+  [1m[36m (0.1ms)[0m  [1mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140526065128')
+Migrating to AddNameToUsers (20140526065219)
+  [1m[36m (0.4ms)[0m  [1mALTER TABLE "users" ADD "name" varchar(255)[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140526065219')
+Migrating to CreateIdentities (20140526065326)
+  [1m[36m (0.3ms)[0m  [1mCREATE TABLE "identities" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "user_id" integer, "provider" varchar(255), "uid" varchar(255), "created_at" datetime, "updated_at" datetime) [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("identities")
+  [1m[36m (0.1ms)[0m  [1mCREATE INDEX "index_identities_on_user_id" ON "identities" ("user_id")[0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20140526065326')
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (0.1ms)[0m  SELECT "schema_migrations"."version" FROM "schema_migrations" 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("identities")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_identities_on_user_id')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("users")[0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_info('index_users_on_reset_password_token')
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_info('index_users_on_email')[0m
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at Mon May 26 14:22:06 +0530 2014
+  Processing by Devise::RegistrationsController#new as HTML
+Rendered /Users/rajatbhatia/.rvm/gems/ree-1.8.7-2011.03/gems/devise-2.2.8/app/views/devise/shared/_links.erb (1.5ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ree-1.8.7-2011.03/gems/devise-2.2.8/app/views/devise/registrations/new.html.erb within layouts/application (19.5ms)
+Compiled application.css  (1ms)  (pid 13369)
+Compiled application.js  (4ms)  (pid 13369)
+Compiled jquery.js  (66ms)  (pid 13369)
+Compiled jquery_ujs.js  (0ms)  (pid 13369)
+Completed 200 OK in 155ms (Views: 129.7ms | ActiveRecord: 0.8ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at Mon May 26 14:22:06 +0530 2014
+Served asset /application.css - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at Mon May 26 14:22:06 +0530 2014
+Served asset /jquery_ujs.js - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at Mon May 26 14:22:06 +0530 2014
+Served asset /jquery.js - 200 OK (6ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at Mon May 26 14:22:06 +0530 2014
+Served asset /application.js - 200 OK (4ms)
+
+
+Started GET "/users/auth/linked_in" for 127.0.0.1 at Mon May 26 14:22:29 +0530 2014
+  Processing by Devise::OmniauthCallbacksController#passthru as HTML
+  Parameters: {"provider"=>"linked_in"}
+Rendered text template (0.0ms)
+Completed 404 Not Found in 7ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/linked_in" for 127.0.0.1 at Mon May 26 14:22:56 +0530 2014
+  Processing by Devise::OmniauthCallbacksController#passthru as HTML
+  Parameters: {"provider"=>"linked_in"}
+Rendered text template (0.0ms)
+Completed 404 Not Found in 6ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/users/auth/linked_in" for 127.0.0.1 at Mon May 26 14:23:54 +0530 2014
+  Processing by Devise::OmniauthCallbacksController#passthru as HTML
+  Parameters: {"provider"=>"linked_in"}
+Rendered text template (0.0ms)
+Completed 404 Not Found in 3ms (Views: 3.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 12:43:05 +0530
+Served asset /rails.png - 200 OK (2ms)
+
+
+Started GET "/auth" for 127.0.0.1 at 2014-06-23 12:43:16 +0530
+
+ActionController::RoutingError (No route matches [GET] "/auth"):
+  
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (3.0ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 12:43:30 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--6c03c671-d6cc-4adb-86a8-946dd62cb049
+Completed 302 Found in 2001ms
+
+
+Started GET "/linkedin/callback?oauth_token=75--6c03c671-d6cc-4adb-86a8-946dd62cb049&oauth_verifier=80892" for 127.0.0.1 at 2014-06-23 12:43:44 +0530
+  Processing by LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"75--6c03c671-d6cc-4adb-86a8-946dd62cb049", "oauth_verifier"=>"80892"}
+Completed 500 Internal Server Error in 5242ms
+
+NoMethodError (undefined method `root_path' for #<LinkedinController:0x007feea88515d0>):
+  app/controllers/linkedin_controller.rb:47:in `callback'
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (5.2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 12:44:45 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 12:45:47 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 12:45:57 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 12:46:15 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 12:46:29 +0530
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 12:47:08 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 12:56:42 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 12:57:30 +0530
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 12:57:38 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (2.2ms)
+Compiled application.css  (1ms)  (pid 67981)
+Warning. Error encountered while saving cache /Users/rajatbhatia/Projects/LinkedIn_poc/tmp/cache/sass/0c658b1dd5be5b294b7b81517876007ee9b9abf0/linkedin.css.scssc: can't dump anonymous class #<Class:0x007f866c19a538>
+Compiled linkedin.css  (7ms)  (pid 67981)
+Cache for Asset (application.js) is stale
+/Users/rajatbhatia/.rvm/gems/ree-1.8.7-2011.03/gems/jquery-rails-3.1.0/vendor/assets/javascripts/jquery.js isn't in paths: /Users/rajatbhatia/Projects/LinkedIn_poc/app/assets/images, /Users/rajatbhatia/Projects/LinkedIn_poc/app/assets/javascripts, /Users/rajatbhatia/Projects/LinkedIn_poc/app/assets/stylesheets, /Users/rajatbhatia/Projects/LinkedIn_poc/vendor/assets/stylesheets, /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/gems/1.9.1/gems/jquery-rails-3.1.0/vendor/assets/javascripts
+Compiled application.js  (3ms)  (pid 67981)
+Compiled jquery.js  (3ms)  (pid 67981)
+Compiled jquery_ujs.js  (0ms)  (pid 67981)
+Compiled linkedin.js  (72ms)  (pid 67981)
+Completed 200 OK in 145ms (Views: 144.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 12:57:38 +0530
+Served asset /application.css - 200 OK (6ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 12:57:38 +0530
+Served asset /linkedin.css - 200 OK (4ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 12:57:38 +0530
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 12:57:38 +0530
+Served asset /application.js - 200 OK (5ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 12:57:38 +0530
+Served asset /linkedin.js - 200 OK (5ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 12:57:38 +0530
+Served asset /jquery_ujs.js - 200 OK (6ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 12:57:46 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--fe2e659e-5f9a-48bf-bde4-fdb6e25346c9
+Completed 302 Found in 1554ms
+
+
+Started GET "/linkedin/callback?oauth_token=75--fe2e659e-5f9a-48bf-bde4-fdb6e25346c9&oauth_verifier=98899" for 127.0.0.1 at 2014-06-23 12:57:50 +0530
+  Processing by LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"75--fe2e659e-5f9a-48bf-bde4-fdb6e25346c9", "oauth_verifier"=>"98899"}
+Completed 500 Internal Server Error in 5300ms
+
+NoMethodError (undefined method `root_path' for #<LinkedinController:0x007f866c2f7188>):
+  app/controllers/linkedin_controller.rb:51:in `callback'
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.1ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.9ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (4.6ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:41:07 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 40ms (Views: 39.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 13:41:07 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 13:41:07 +0530
+Served asset /linkedin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 13:41:07 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 13:41:07 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 13:41:07 +0530
+Served asset /linkedin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 13:41:07 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 13:41:09 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--592238c1-810a-427b-8bad-fa08551cdb47
+Completed 302 Found in 1548ms
+
+
+Started GET "/linkedin/callback?oauth_token=75--592238c1-810a-427b-8bad-fa08551cdb47&oauth_verifier=75811" for 127.0.0.1 at 2014-06-23 13:41:14 +0530
+  Processing by LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"75--592238c1-810a-427b-8bad-fa08551cdb47", "oauth_verifier"=>"75811"}
+Completed 500 Internal Server Error in 5587ms
+
+NoMethodError - undefined method `root_path' for #<LinkedinController:0x007fb475533780>:
+  app/controllers/linkedin_controller.rb:51:in `callback'
+  actionpack (3.1.12) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.1.12) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.1.12) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:416:in `_run__1298472893371979581__process_action__655670871797273721__callbacks'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.1.12) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.1.12) lib/active_support/notifications.rb:53:in `block in instrument'
+  activesupport (3.1.12) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.1.12) lib/active_support/notifications.rb:53:in `instrument'
+  actionpack (3.1.12) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+  activerecord (3.1.12) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.1.12) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.1.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.1.12) lib/action_controller/metal.rb:193:in `dispatch'
+  actionpack (3.1.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.1.12) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:71:in `call'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:71:in `dispatch'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:35:in `call'
+  rack-mount (0.8.3) lib/rack/mount/route_set.rb:152:in `block in call'
+  rack-mount (0.8.3) lib/rack/mount/code_generation.rb:96:in `block in recognize'
+  rack-mount (0.8.3) lib/rack/mount/code_generation.rb:75:in `optimized_each'
+  rack-mount (0.8.3) lib/rack/mount/code_generation.rb:95:in `recognize'
+  rack-mount (0.8.3) lib/rack/mount/route_set.rb:141:in `call'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:538:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.3.10) lib/rack/etag.rb:23:in `call'
+  rack (1.3.10) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/flash.rb:243:in `call'
+  rack (1.3.10) lib/rack/session/abstract/id.rb:195:in `context'
+  rack (1.3.10) lib/rack/session/abstract/id.rb:190:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/cookies.rb:331:in `call'
+  activerecord (3.1.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.1.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.1.12) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/reloader.rb:68:in `call'
+  rack (1.3.10) lib/rack/sendfile.rb:101:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+  railties (3.1.12) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.3.10) lib/rack/methodoverride.rb:24:in `call'
+  rack (1.3.10) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.1.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.3.10) lib/rack/lock.rb:15:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.1.12) lib/rails/engine.rb:456:in `call'
+  railties (3.1.12) lib/rails/application.rb:143:in `call'
+  rack (1.3.10) lib/rack/content_length.rb:14:in `call'
+  railties (3.1.12) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.3.10) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+Started POST "/__better_errors/70206555709100/variables" for 127.0.0.1 at 2014-06-23 13:41:19 +0530
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:46:07 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (0.0ms)
+Completed 200 OK in 5ms (Views: 4.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 13:46:07 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 13:46:07 +0530
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 13:46:07 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 13:46:07 +0530
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 13:46:07 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 13:46:07 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 13:46:09 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--8bc3ea96-4ceb-453f-a2e6-03d6ef1c209d
+Completed 302 Found in 2144ms
+
+
+Started GET "/linkedin/callback?oauth_token=75--8bc3ea96-4ceb-453f-a2e6-03d6ef1c209d&oauth_verifier=37726" for 127.0.0.1 at 2014-06-23 13:46:14 +0530
+  Processing by LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"75--8bc3ea96-4ceb-453f-a2e6-03d6ef1c209d", "oauth_verifier"=>"37726"}
+Completed 500 Internal Server Error in 5270ms
+
+NoMethodError - undefined method `root_path' for #<LinkedinController:0x007fb479f8b7d8>:
+  app/controllers/linkedin_controller.rb:51:in `callback'
+  actionpack (3.1.12) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.1.12) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.1.12) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:416:in `_run__1298472893371979581__process_action__655670871797273721__callbacks'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.1.12) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.1.12) lib/active_support/notifications.rb:53:in `block in instrument'
+  activesupport (3.1.12) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.1.12) lib/active_support/notifications.rb:53:in `instrument'
+  actionpack (3.1.12) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+  activerecord (3.1.12) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.1.12) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.1.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.1.12) lib/action_controller/metal.rb:193:in `dispatch'
+  actionpack (3.1.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.1.12) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:71:in `call'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:71:in `dispatch'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:35:in `call'
+  rack-mount (0.8.3) lib/rack/mount/route_set.rb:152:in `block in call'
+  rack-mount (0.8.3) lib/rack/mount/code_generation.rb:96:in `block in recognize'
+  rack-mount (0.8.3) lib/rack/mount/code_generation.rb:75:in `optimized_each'
+  rack-mount (0.8.3) lib/rack/mount/code_generation.rb:95:in `recognize'
+  rack-mount (0.8.3) lib/rack/mount/route_set.rb:141:in `call'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:538:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.3.10) lib/rack/etag.rb:23:in `call'
+  rack (1.3.10) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/flash.rb:243:in `call'
+  rack (1.3.10) lib/rack/session/abstract/id.rb:195:in `context'
+  rack (1.3.10) lib/rack/session/abstract/id.rb:190:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/cookies.rb:331:in `call'
+  activerecord (3.1.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.1.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.1.12) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/reloader.rb:68:in `call'
+  rack (1.3.10) lib/rack/sendfile.rb:101:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+  railties (3.1.12) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.3.10) lib/rack/methodoverride.rb:24:in `call'
+  rack (1.3.10) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.1.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.3.10) lib/rack/lock.rb:15:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.1.12) lib/rails/engine.rb:456:in `call'
+  railties (3.1.12) lib/rails/application.rb:143:in `call'
+  rack (1.3.10) lib/rack/content_length.rb:14:in `call'
+  railties (3.1.12) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.3.10) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+Started POST "/__better_errors/70206556082920/variables" for 127.0.0.1 at 2014-06-23 13:46:19 +0530
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:49:49 +0530
+
+NoMethodError (undefined method `reverse_merge' for "linkedin#index":String):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (0.9ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (2.1ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (7.0ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:50:08 +0530
+
+NoMethodError (undefined method `reverse_merge' for "linkedin#index":String):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.5ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 13:50:14 +0530
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 13:50:17 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:50:22 +0530
+
+ActionController::RoutingError (No route matches [GET] "/linkedin/index"):
+  
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:50:33 +0530
+
+NoMethodError (undefined method `reverse_merge' for "linkedin/index":String):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:50:50 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (0.3ms)
+Completed 200 OK in 12ms (Views: 11.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 13:50:50 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 13:50:50 +0530
+Served asset /linkedin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 13:50:50 +0530
+Served asset /jquery.js - 304 Not Modified (3ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 13:50:50 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 13:50:50 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 13:50:50 +0530
+Served asset /linkedin.js - 304 Not Modified (2ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 13:50:52 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--5ded194b-957b-4284-a35e-d23e66c9b76d
+Completed 302 Found in 1549ms
+
+
+Started GET "/linkedin/callback?oauth_token=75--5ded194b-957b-4284-a35e-d23e66c9b76d&oauth_verifier=06820" for 127.0.0.1 at 2014-06-23 13:50:56 +0530
+  Processing by LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"75--5ded194b-957b-4284-a35e-d23e66c9b76d", "oauth_verifier"=>"06820"}
+Completed 500 Internal Server Error in 5214ms
+
+NoMethodError - undefined method `root_path' for #<LinkedinController:0x007fea3c0646f8>:
+  app/controllers/linkedin_controller.rb:51:in `callback'
+  actionpack (3.1.12) lib/action_controller/metal/implicit_render.rb:4:in `send_action'
+  actionpack (3.1.12) lib/abstract_controller/base.rb:167:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/rendering.rb:10:in `process_action'
+  actionpack (3.1.12) lib/abstract_controller/callbacks.rb:18:in `block in process_action'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:416:in `_run__2086669893840801428__process_action__4398986548887939048__callbacks'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:386:in `_run_process_action_callbacks'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.1.12) lib/abstract_controller/callbacks.rb:17:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/rescue.rb:17:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/instrumentation.rb:30:in `block in process_action'
+  activesupport (3.1.12) lib/active_support/notifications.rb:53:in `block in instrument'
+  activesupport (3.1.12) lib/active_support/notifications/instrumenter.rb:21:in `instrument'
+  activesupport (3.1.12) lib/active_support/notifications.rb:53:in `instrument'
+  actionpack (3.1.12) lib/action_controller/metal/instrumentation.rb:29:in `process_action'
+  actionpack (3.1.12) lib/action_controller/metal/params_wrapper.rb:201:in `process_action'
+  activerecord (3.1.12) lib/active_record/railties/controller_runtime.rb:18:in `process_action'
+  actionpack (3.1.12) lib/abstract_controller/base.rb:121:in `process'
+  actionpack (3.1.12) lib/abstract_controller/rendering.rb:45:in `process'
+  actionpack (3.1.12) lib/action_controller/metal.rb:193:in `dispatch'
+  actionpack (3.1.12) lib/action_controller/metal/rack_delegation.rb:14:in `dispatch'
+  actionpack (3.1.12) lib/action_controller/metal.rb:236:in `block in action'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:71:in `dispatch'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:35:in `call'
+  rack-mount (0.8.3) lib/rack/mount/route_set.rb:152:in `block in call'
+  rack-mount (0.8.3) lib/rack/mount/code_generation.rb:96:in `block in recognize'
+  rack-mount (0.8.3) lib/rack/mount/code_generation.rb:75:in `optimized_each'
+  rack-mount (0.8.3) lib/rack/mount/code_generation.rb:95:in `recognize'
+  rack-mount (0.8.3) lib/rack/mount/route_set.rb:141:in `call'
+  actionpack (3.1.12) lib/action_dispatch/routing/route_set.rb:538:in `call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:84:in `protected_app_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:79:in `better_errors_call'
+  better_errors (1.1.0) lib/better_errors/middleware.rb:56:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/best_standards_support.rb:17:in `call'
+  rack (1.3.10) lib/rack/etag.rb:23:in `call'
+  rack (1.3.10) lib/rack/conditionalget.rb:25:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/head.rb:14:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/params_parser.rb:21:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/flash.rb:243:in `call'
+  rack (1.3.10) lib/rack/session/abstract/id.rb:195:in `context'
+  rack (1.3.10) lib/rack/session/abstract/id.rb:190:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/cookies.rb:331:in `call'
+  activerecord (3.1.12) lib/active_record/query_cache.rb:64:in `call'
+  activerecord (3.1.12) lib/active_record/connection_adapters/abstract/connection_pool.rb:477:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/callbacks.rb:29:in `block in call'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:392:in `_run_call_callbacks'
+  activesupport (3.1.12) lib/active_support/callbacks.rb:81:in `run_callbacks'
+  actionpack (3.1.12) lib/action_dispatch/middleware/callbacks.rb:28:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/reloader.rb:68:in `call'
+  rack (1.3.10) lib/rack/sendfile.rb:101:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/remote_ip.rb:48:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/show_exceptions.rb:47:in `call'
+  railties (3.1.12) lib/rails/rack/logger.rb:13:in `call'
+  rack (1.3.10) lib/rack/methodoverride.rb:24:in `call'
+  rack (1.3.10) lib/rack/runtime.rb:17:in `call'
+  activesupport (3.1.12) lib/active_support/cache/strategy/local_cache.rb:72:in `call'
+  rack (1.3.10) lib/rack/lock.rb:15:in `call'
+  actionpack (3.1.12) lib/action_dispatch/middleware/static.rb:61:in `call'
+  railties (3.1.12) lib/rails/engine.rb:456:in `call'
+  railties (3.1.12) lib/rails/application.rb:143:in `call'
+  rack (1.3.10) lib/rack/content_length.rb:14:in `call'
+  railties (3.1.12) lib/rails/rack/log_tailer.rb:14:in `call'
+  rack (1.3.10) lib/rack/handler/webrick.rb:59:in `service'
+  /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:138:in `service'
+  /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/httpserver.rb:94:in `run'
+  /Users/rajatbhatia/.rvm/rubies/ruby-1.9.3-p547/lib/ruby/1.9.1/webrick/server.rb:191:in `block in start_thread'
+
+
+Started POST "/__better_errors/70322013418440/variables" for 127.0.0.1 at 2014-06-23 13:51:01 +0530
+
+
+Started POST "/__better_errors/70322013418440/eval" for 127.0.0.1 at 2014-06-23 13:51:15 +0530
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 13:55:56 +0530
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 13:55:59 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 13:56:02 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:56:09 +0530
+
+ActionController::RoutingError (No route matches [GET] "/linkedin/index"):
+  
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 13:56:53 +0530
+
+ArgumentError (missing :controller):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (2.0ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (4.5ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (9.2ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:57:00 +0530
+
+ActionController::RoutingError (No route matches [GET] "/linkedin/index"):
+  
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 13:57:21 +0530
+
+ArgumentError (missing :action):
+  config/routes.rb:3:in `block in <top (required)>'
+  config/routes.rb:1:in `<top (required)>'
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_trace.erb (1.0ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (0.8ms)
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/diagnostics.erb within rescues/layout (3.6ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:57:25 +0530
+
+ActionController::RoutingError (No route matches [GET] "/linkedin/index"):
+  
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.5ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 13:58:17 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (2.4ms)
+Completed 200 OK in 41ms (Views: 41.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 13:58:17 +0530
+Served asset /jquery.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 13:58:17 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 13:58:17 +0530
+Served asset /linkedin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 13:58:17 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 13:58:17 +0530
+Served asset /linkedin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 13:58:17 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 13:58:20 +0530
+Served asset /rails.png - 200 OK (1ms)
+
+
+Started GET "/rails/info/properties" for 127.0.0.1 at 2014-06-23 13:58:33 +0530
+  [1m[36m (1.5ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  Processing by Rails::InfoController#properties as */*
+Rendered inline template (0.3ms)
+Completed 200 OK in 3ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:02:16 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 14:02:25 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 5.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 14:02:26 +0530
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 14:02:26 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 14:02:26 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 14:02:26 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 14:02:26 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 14:02:26 +0530
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 14:02:29 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--92d882da-492b-4899-9984-7e6c3279a238
+Completed 302 Found in 1539ms
+
+
+Started GET "/linkedin/callback?oauth_token=75--92d882da-492b-4899-9984-7e6c3279a238&oauth_verifier=17069" for 127.0.0.1 at 2014-06-23 14:02:33 +0530
+  Processing by LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"75--92d882da-492b-4899-9984-7e6c3279a238", "oauth_verifier"=>"17069"}
+Redirected to http://localhost:3000/?imported_from_linkedin=success
+Completed 302 Found in 5354ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:02:39 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:07:08 +0530
+Served asset /rails.png - 200 OK (1ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:07:11 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/linkedin" for 127.0.0.1 at 2014-06-23 14:07:13 +0530
+
+ActionController::RoutingError (No route matches [GET] "/linkedin"):
+  
+
+Rendered /Users/rajatbhatia/.rvm/gems/ruby-1.9.3-p547/gems/actionpack-3.1.12/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (2.8ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 14:07:19 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 13ms (Views: 12.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 14:07:19 +0530
+Served asset /application.css - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 14:07:19 +0530
+Served asset /application.js - 200 OK (8ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 14:07:19 +0530
+Served asset /linkedin.js - 200 OK (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 14:07:19 +0530
+Served asset /jquery_ujs.js - 200 OK (2ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 14:07:19 +0530
+Served asset /linkedin.css - 200 OK (1ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 14:07:19 +0530
+Served asset /jquery.js - 200 OK (5ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 14:07:23 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--66a82d94-2724-42b4-8b3c-92d6e84fd4fb
+Completed 302 Found in 1890ms
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 14:09:24 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 44ms (Views: 44.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 14:09:26 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--2beb2c5a-5b20-45b7-9780-3b4c721cab54
+Completed 302 Found in 1570ms
+
+
+Started GET "/linkedin/callback?oauth_token=75--2beb2c5a-5b20-45b7-9780-3b4c721cab54&oauth_verifier=64054" for 127.0.0.1 at 2014-06-23 14:10:01 +0530
+  Processing by LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"75--2beb2c5a-5b20-45b7-9780-3b4c721cab54", "oauth_verifier"=>"64054"}
+Redirected to http://localhost:3000/?imported_from_linkedin=success
+Completed 302 Found in 353003ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:15:54 +0530
+Served asset /rails.png - 304 Not Modified (2ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 14:15:54 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/linkedin/index" for 127.0.0.1 at 2014-06-23 14:15:54 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 14:15:54 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 14:15:54 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (8ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 14:15:54 +0530
+Served asset /linkedin.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 14:15:54 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 14:15:54 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 14:15:54 +0530
+Served asset /linkedin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:16:49 +0530
+Served asset /rails.png - 200 OK (1ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:16:52 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:16:54 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:16:56 +0530
+Served asset /rails.png - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-23 14:17:39 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (2.6ms)
+Completed 200 OK in 43ms (Views: 43.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 14:17:39 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 14:17:39 +0530
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 14:17:39 +0530
+Served asset /linkedin.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 14:17:39 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 14:17:39 +0530
+Served asset /linkedin.css - 304 Not Modified (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 14:17:39 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 14:17:43 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--98da633d-d983-4c8a-8ba7-efd3bbdc9348
+Completed 302 Found in 1546ms
+
+
+Started GET "/linkedin/callback?oauth_token=75--98da633d-d983-4c8a-8ba7-efd3bbdc9348&oauth_verifier=82206" for 127.0.0.1 at 2014-06-23 14:17:47 +0530
+  Processing by LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"75--98da633d-d983-4c8a-8ba7-efd3bbdc9348", "oauth_verifier"=>"82206"}
+Redirected to http://localhost:3000/?imported_from_linkedin=success
+Completed 302 Found in 5291ms
+
+
+Started GET "/assets/rails.png" for 127.0.0.1 at 2014-06-23 14:17:53 +0530
+Served asset /rails.png - 304 Not Modified (1ms)
+
+
+Started GET "/?imported_from_linkedin=success" for 127.0.0.1 at 2014-06-23 14:18:03 +0530
+  Processing by LinkedinController#index as HTML
+  Parameters: {"imported_from_linkedin"=>"success"}
+Rendered linkedin/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 14:18:03 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 14:18:03 +0530
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:03 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:03 +0530
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:03 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:03 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-23 14:18:18 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 8ms (Views: 7.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2014-06-23 14:18:18 +0530
+  Processing by LinkedinController#index as HTML
+Rendered linkedin/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 5.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 14:18:18 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:18 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:18 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 14:18:18 +0530
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:18 +0530
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:18 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/linkedin/auth" for 127.0.0.1 at 2014-06-23 14:18:20 +0530
+  Processing by LinkedinController#auth as HTML
+Redirected to https://api.linkedin.com/uas/oauth/authenticate?oauth_token=75--9decf88e-d3aa-4b1c-978f-0dacfb26ca9d
+Completed 302 Found in 1166ms
+
+
+Started GET "/linkedin/callback?oauth_token=75--9decf88e-d3aa-4b1c-978f-0dacfb26ca9d&oauth_verifier=90441" for 127.0.0.1 at 2014-06-23 14:18:22 +0530
+  Processing by LinkedinController#callback as HTML
+  Parameters: {"oauth_token"=>"75--9decf88e-d3aa-4b1c-978f-0dacfb26ca9d", "oauth_verifier"=>"90441"}
+Redirected to http://localhost:3000/?imported_from_linkedin=success
+Completed 302 Found in 5120ms
+
+
+Started GET "/?imported_from_linkedin=success" for 127.0.0.1 at 2014-06-23 14:18:27 +0530
+  Processing by LinkedinController#index as HTML
+  Parameters: {"imported_from_linkedin"=>"success"}
+Rendered linkedin/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 5ms (Views: 5.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 14:18:27 +0530
+Served asset /linkedin.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 14:18:28 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:28 +0530
+Served asset /jquery.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:28 +0530
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:28 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 14:18:28 +0530
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/?imported_from_linkedin=success" for 127.0.0.1 at 2014-06-23 14:19:13 +0530
+  Processing by LinkedinController#index as HTML
+  Parameters: {"imported_from_linkedin"=>"success"}
+Rendered linkedin/index.html.erb within layouts/application (0.1ms)
+Completed 200 OK in 6ms (Views: 6.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2014-06-23 14:19:13 +0530
+Served asset /application.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2014-06-23 14:19:13 +0530
+Served asset /application.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.js?body=1" for 127.0.0.1 at 2014-06-23 14:19:13 +0530
+Served asset /linkedin.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/linkedin.css?body=1" for 127.0.0.1 at 2014-06-23 14:19:13 +0530
+Served asset /linkedin.css - 304 Not Modified (0ms)
